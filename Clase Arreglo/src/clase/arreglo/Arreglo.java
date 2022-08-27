@@ -4,38 +4,24 @@
  */
 package clase.arreglo;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author david
  */
 public class Arreglo {
-     private int numElementos;
-     private int longArreglo;
-     private String elemento;
-     private int indice;
-     String contenido;
-     
+    private String[] arreglo = new String[]{};
+    private String elemento;
 
     public Arreglo() {
     }
 
-    public Arreglo(int numElementos, int longArreglo, String elemento, int indice, String contenido) {
-        this.numElementos = numElementos;
-        this.longArreglo = longArreglo;
+    public Arreglo(String elemento) {
         this.elemento = elemento;
-        this.indice = indice;
-        this.contenido = contenido;
     }
-    
-
-    public int getIndice() {
-        return indice;
-    }
-
-    public void setIndice(int indice) {
-        this.indice = indice;
-    }
-    
+   
 
     public String getElemento() {
         return elemento;
@@ -45,16 +31,44 @@ public class Arreglo {
         this.elemento = elemento;
     }
 
+    public String[] getArreglo() {
+        return arreglo;
+    }
+
+    public void setArreglo(String[] arreglo) {
+        this.arreglo = arreglo;
+    }
+
     @Override
     public String toString() {
-        return "Los datos del arreglo son: " + elemento;
+        return "Arreglo{" + "arreglo=" + arreglo + ", elemento=" + elemento + '}';
     }
-     
-     
-   
-     
- 
     
+    public int getLongitud(){
+        int longi = arreglo.length;
+        return longi;
+    }
 
+    public void limpiar(String arreglo[]){
+        String newElemento = "";
+        for (int i = 0; i < arreglo.length; i++) {
+            arreglo[i].replaceAll(arreglo[i], newElemento);
+        }
+    }
+    public void agregarElemento(){
+        String index= JOptionPane.showInputDialog("en que posicion del indice desea insertar");
+        int indice = Integer.parseInt(index);
+        String elementoAg = JOptionPane.showInputDialog("agregue el elemento");
+        
+        
+            arreglo[indice] =  elementoAg;
+        
+    }
+    
+    public void darElemento(){
+        String elemDado=JOptionPane.showInputDialog("que elemento desea ver");
+        int indiceElem = Integer.parseInt(elemDado);
+        System.out.println(arreglo[indiceElem]);
+    }
     
 }
