@@ -1,3 +1,5 @@
+package tarea.pkg4;
+
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -93,10 +95,14 @@ public class ConjuntoADT <T> implements Iterator<T>{
          return conjuntoInterseccionado;
            }
 
+    @Override
+    public String toString() {
+        return conjunto.toString();
+    }
+
     
-    public java.util.Iterator<T> iterator(){
-        return new java.util.Iterator<T>(){
-    int indice = 0;
+   
+    int indice=0;
     @Override
     public boolean hasNext() {
         return indice<conjunto.size();
@@ -107,11 +113,10 @@ public class ConjuntoADT <T> implements Iterator<T>{
         return conjunto.get(indice++);
     }
 
-    @Override
-    public void remove() {
-       throw new UnsupportedOperationException();
+    
+    
     }
-    };
-    }
-    }    
+
+    
+       
     
