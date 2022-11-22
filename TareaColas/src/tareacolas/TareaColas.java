@@ -25,6 +25,7 @@ public class TareaColas {
         c.enqueue("gusta");
         c.enqueue("el");
         c.enqueue("deporte");
+        c.to_String();
         c.dequeue();
         c.dequeue();
         c.dequeue();

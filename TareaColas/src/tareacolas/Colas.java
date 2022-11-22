@@ -4,6 +4,8 @@
  */
 package tareacolas;
 
+
+
 /**
  *
  * @author david
@@ -59,17 +61,19 @@ public class Colas<T> {
         return null;
     }
 
-    
-    public String to_String() {
-        String textoCola = "";
-        Node<T> aux = head;
-        while (aux != null) {
-            textoCola += aux.valor + " ";
-            aux = aux.siguiente;
+    public void to_String() {
+       
+        int contador=0;
+       Node<T> aux = head;
+        while(contador<=lenght()-1){
+            if(aux==null){
+                System.out.println("no hay valores en la cola");
+                break;
+            }else{
+            System.out.println(aux.valor);
+            aux=aux.siguiente;
+            contador++;
+            }
         }
-        if (textoCola==null) {
-            textoCola = "null";
-        }
-        return textoCola;
-    }
+   }
 }
