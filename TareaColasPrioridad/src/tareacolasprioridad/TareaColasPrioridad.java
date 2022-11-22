@@ -33,10 +33,10 @@ public class TareaColasPrioridad {
          opcion=menu();
          switch(opcion){
              case 1:    //solicitar al usuario los datos del objeto (libre) 
-                     elementos.insertar(Priorizar(i));
+                     elementos.Enqueue(Priorizar(i));
                      i++;
                       break;
-             case 2:  elementos.eliminar();
+             case 2:  elementos.Dequeue();
                       break;
              case 3:  elementos.imprimir();
                       break;

@@ -21,7 +21,7 @@ public class ColasPrioritarias {
     public ColasPrioritarias() {
     }
     
-    public void ordenarPrioridad(){
+    public void BoundedPriorityQueue(){
         for(int i=0;i<fin;i++){
             int pos_menor=i;
 
@@ -45,7 +45,14 @@ public class ColasPrioritarias {
             cola[pos_menor]=aux2;
         }
     }
-    public void insertar(Tripulantes v){
+    
+    public boolean is_empty(){
+        if(cola.length==0){
+            return true;
+        }else return false;
+    }
+    
+    public void Enqueue(Tripulantes v){
         if(((fin==cola.length-1)&&(frente==0)||(fin+1)==frente))
             System.out.println("\nDesbordamiento, la cola esta llena. ");
         else{
@@ -58,9 +65,9 @@ public class ColasPrioritarias {
                 frente =0;
                        
         }
-        ordenarPrioridad();
+        BoundedPriorityQueue();
     }
-    public void eliminar(){
+    public void Dequeue(){
         Tripulantes v;
         
         if(frente==-1){
@@ -74,7 +81,7 @@ public class ColasPrioritarias {
                 frente=-1;
                 fin=-1;
             }else{
-            ordenarPrioridad();
+            BoundedPriorityQueue();
             }
             System.out.println("El elemento Eliminado es: "+ v.Cargo+" con prioridad "+v.Prioridad);
 
