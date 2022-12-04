@@ -19,6 +19,8 @@ public class ProyectoFinalCollections {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        System.out.println("trabajo final de david gomez vazquez");
+                
         System.out.println("----------------EJEMPLO HashMap-----------------");
         HashMap <Integer, String> HM = new HashMap<>();
         HM.put(10, "David Gomez");
