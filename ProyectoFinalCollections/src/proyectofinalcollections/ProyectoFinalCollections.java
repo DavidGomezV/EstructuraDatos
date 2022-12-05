@@ -31,6 +31,7 @@ public class ProyectoFinalCollections {
         HM.isEmpty();
         HM.replace(10, "Kyrie Irving");
         HM.containsValue("LeBron James");
+        System.out.println("imprimiendo el hash map");
         System.out.println(HM.values());
         System.out.println(HM.keySet());
           
@@ -42,6 +43,7 @@ public class ProyectoFinalCollections {
         tm.put(4, "David Villa");
         tm.put(5, "Wayne Rooney");
         tm.headMap(3);
+        System.out.println("imprimiendo el tree map");
         tm.values().forEach(System.out::println);
         
         System.out.println("--------------EJEMPLO LinkedHashMap");
@@ -52,7 +54,8 @@ public class ProyectoFinalCollections {
         lhm.put(1234, "Asafa Powell");
         lhm.put(12345, "Yohan Blake");
         lhm.remove(123);
-        for(Map.Entry<Integer, String>ite : lhm.entrySet()){
+        System.out.println("IMprimiendo el linked hash map");
+        for(Map.Entry<Integer, String> ite : lhm.entrySet()){
             System.out.println(ite.getKey()+", ");
         }
     }
